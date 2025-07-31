@@ -1,0 +1,181 @@
+*{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: brown;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.todo-container {
+  background: wheat;
+  padding: 20px 30px;
+  border-radius: 12px;
+  width: 500px;
+  box-shadow: 0 2px 10px rgba(212, 207, 207, 0.1);
+}
+
+.title {
+  color: brown;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.input-area input[type="text"],
+.input-area input[type="date"] {
+  flex: 1;
+  padding: 8px;
+  border: 3px solid brown;
+  border-radius: 6px;
+}
+
+.input-area button {
+  background: brown;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.input-area button:hover {
+  background-color: sienna;
+}
+
+.filter-sort {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filter-sort select {
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+ul#task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.task-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-actions span {
+  font-size: 12px;
+  color: brown;
+}
+
+.task-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.task-actions button.delete {
+  color: red;
+  font-size: 200%;
+}
+
+.task-actions button.edit {
+  color: green;
+  font-size: 200%;
+}
+@media (max-width: 480px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .todo-container {
+    width: 100%;
+    padding: 15px 20px;
+  }
+
+  .title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .input-area {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input-area input[type="text"],
+  .input-area input[type="date"],
+  .input-area button {
+    width: 100%;
+  }
+
+  .input-area button {
+    padding: 10px 0;
+  }
+
+  .filter-sort {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filter-sort select {
+    width: 100%;
+  }
+
+  ul#task-list {
+    padding: 0;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .task-text {
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .task-actions {
+    gap: 10px;
+  }
+
+  .task-actions button.delete,
+  .task-actions button.edit {
+    font-size: 150%;
+  }
+
+  .task-actions span {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My To Do List</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="todo-container">
+    <h1><input type="checkbox" disabled checked> <span class="title">My To-do List</span></h1>
+
+    <div class="input-area">
+      <input type="text" id="new-task" placeholder="Add new..." />
+      <input type="date" id="due-date" />
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <div class="filter-sort">
+      <select id="filter" onchange="renderTasks()">
+        <option value="all">All</option>
+        <option value="completed">Completed</option>
+        <option value="pending">Pending</option>
+      </select>
+      <select id="sort" onchange="renderTasks()">
+        <option value="added">Added date</option>
+        <option value="due">Due date</option>
+      </select>
+    </div>
+
+    <ul id="task-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
